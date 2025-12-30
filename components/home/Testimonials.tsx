@@ -49,10 +49,11 @@ export default function Testimonials() {
           <div className="flex animate-scroll-testimonials gap-4">
             {duplicatedReviews.map((item, idx) => {
               const fullText = ("text" in item ? item.text : item.quote) ?? "";
+              const authorName = "author_name" in item ? item.author_name : ("name" in item ? item.name : "Patient");
               
               return (
                 <div
-                  key={`${item.author_name ?? item.name ?? "fallback"}-${idx}`}
+                  key={`${authorName}-${idx}`}
                   className="w-[320px] flex-shrink-0 flex flex-col gap-3 rounded border border-silver/40 bg-white p-4 text-sm leading-6 text-charcoal shadow-sm"
                 >
                   <div className="flex items-center justify-between">
@@ -60,7 +61,7 @@ export default function Testimonials() {
                       {"profile_photo_url" in item && item.profile_photo_url ? (
                         <Image
                           src={item.profile_photo_url}
-                          alt={`${item.author_name ?? "Reviewer"} profile`}
+                          alt={`${authorName} profile`}
                           width={40}
                           height={40}
                           className="h-10 w-10 rounded-full object-cover"
@@ -70,7 +71,7 @@ export default function Testimonials() {
                         <div className="h-10 w-10 rounded-full bg-silver/40" />
                       )}
                       <span className="font-semibold text-nearBlack">
-                        {item.author_name ?? item.name ?? "Patient"}
+                        {authorName}
                       </span>
                     </div>
                     {"rating" in item && item.rating ? (
