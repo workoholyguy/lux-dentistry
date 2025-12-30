@@ -64,10 +64,10 @@ export default function AboutPage() {
           </div>
           <div className="flex items-center gap-4 md:justify-end">
             <a
-              href="tel:7025550187"
+              href="tel:6787737354"
               className="rounded-full border border-gold px-5 py-2 text-sm font-semibold text-nearBlack transition hover:bg-goldSoft"
             >
-              (702) 555-0187
+              (678) 773-7354
             </a>
             <a
               href="/contact"
