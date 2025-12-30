@@ -102,7 +102,7 @@ function Dropdown({ label, items, href }: DropdownProps) {
         {href ? (
           <Link
             href={href}
-            className="text-base font-medium uppercase text-softBg transition hover:text-gold focus-visible:outline-none"
+            className="text-sm font-medium uppercase text-softBg transition hover:text-gold focus-visible:outline-none"
             onMouseEnter={openMenu}
           >
             {label}
@@ -110,7 +110,7 @@ function Dropdown({ label, items, href }: DropdownProps) {
         ) : (
           <button
             type="button"
-            className="text-base font-medium uppercase text-softBg transition hover:text-gold focus-visible:outline-none"
+            className="text-sm font-medium uppercase text-softBg transition hover:text-gold focus-visible:outline-none"
             onClick={() => setOpen((prev) => !prev)}
             onMouseEnter={openMenu}
             aria-haspopup="menu"
@@ -122,7 +122,7 @@ function Dropdown({ label, items, href }: DropdownProps) {
         {open ? (
           <button
             type="button"
-            className="text-base text-gold transition hover:text-goldSoft focus-visible:outline-none"
+            className="text-sm text-gold transition hover:text-goldSoft focus-visible:outline-none"
             onClick={() => setOpen(false)}
             aria-haspopup="menu"
             aria-controls={menuId}
@@ -133,7 +133,7 @@ function Dropdown({ label, items, href }: DropdownProps) {
         ) : (
           <button
             type="button"
-            className="text-base text-gold transition hover:text-goldSoft focus-visible:outline-none"
+            className="text-sm text-gold transition hover:text-goldSoft focus-visible:outline-none"
             onClick={() => setOpen(true)}
             onMouseEnter={openMenu}
             aria-haspopup="menu"
@@ -154,7 +154,7 @@ function Dropdown({ label, items, href }: DropdownProps) {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="block px-4 py-3 text-base uppercase text-charcoal transition hover:bg-goldSoft/40 hover:text-nearBlack"
+                  className="block px-4 py-3 text-sm uppercase text-charcoal transition hover:bg-goldSoft/40 hover:text-nearBlack"
                   onClick={() => setOpen(false)}
                 >
                   {item.name}
@@ -194,7 +194,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-base font-medium uppercase transition hover:text-gold ${
+                  className={`text-sm font-medium uppercase transition hover:text-gold ${
                     isActive ? "text-gold" : "text-softBg"
                   }`}
                 >
@@ -213,7 +213,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-base font-medium uppercase transition hover:text-gold ${
+                  className={`text-sm font-medium uppercase transition hover:text-gold ${
                     isActive ? "text-gold" : "text-softBg"
                   }`}
                 >
@@ -226,13 +226,13 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href={`tel:${phoneNumber.replace(/\D/g, "")}`}
-            className="hidden text-base font-semibold text-gold transition hover:text-goldSoft sm:block"
+            className="hidden rounded-full border border-gold px-4 py-2 text-sm font-semibold text-gold transition hover:border-goldSoft hover:text-goldSoft sm:block"
           >
             {phoneNumber}
           </a>
           <Link
             href="/contact"
-            className="rounded-full bg-gold px-4 py-2 text-base font-semibold text-nearBlack transition hover:bg-goldSoft"
+            className="rounded-full bg-gold px-4 py-2 text-sm font-semibold text-nearBlack transition hover:bg-goldSoft"
           >
             Book Now
           </Link>
