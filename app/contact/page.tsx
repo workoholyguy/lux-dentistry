@@ -64,7 +64,6 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [submittedEmail, setSubmittedEmail] = useState("");
 
   const BASIN_ENDPOINT = "https://usebasin.com/f/0861a7d58a08";
 
@@ -122,27 +121,7 @@ export default function ContactPage() {
       });
 
       if (response.ok) {
-        // Send confirmation email to the submitter
-        try {
-          await fetch("/api/send-confirmation", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email: formData.email,
-              firstName: formData.firstName,
-              lastName: formData.lastName,
-              appointmentType: formData.appointmentType,
-            }),
-          });
-        } catch (emailError) {
-          // Log error but don't fail the form submission
-          console.error("Error sending confirmation email:", emailError);
-        }
-
         setSubmitStatus("success");
-        setSubmittedEmail(formData.email); // Store email before resetting
         setShowSuccessModal(true);
         // Reset form
         setFormData({
@@ -569,11 +548,8 @@ export default function ContactPage() {
               <h3 className="mb-3 text-2xl font-semibold text-nearBlack">
                 Appointment Request Received!
               </h3>
-              <p className="mb-2 text-base leading-7 text-charcoal">
+              <p className="mb-6 text-base leading-7 text-charcoal">
                 Thank you for contacting Lux Dentistry. We&apos;ve received your appointment request and will contact you within 24 hours to confirm your appointment.
-              </p>
-              <p className="mb-6 text-sm text-charcoal">
-                A confirmation email has been sent to <span className="font-semibold text-nearBlack">{submittedEmail || "your email address"}</span>.
               </p>
 
               {/* Action Buttons */}
