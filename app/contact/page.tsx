@@ -86,6 +86,20 @@ export default function ContactPage() {
     };
   }, [showSuccessModal]);
 
+  // Format phone number as (XXX) XXX-XXXX
+  const formatPhoneNumber = (value: string): string => {
+    // Remove all non-digit characters
+    const phoneNumber = value.replace(/\D/g, "");
+    
+    // Limit to 10 digits
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 7) {
+      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+    }
+    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)}-${phoneNumber.slice(6, 10)}`;
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
     const checked = (e.target as HTMLInputElement).checked;
@@ -93,6 +107,14 @@ export default function ContactPage() {
     setFormData(prev => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value
+    }));
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formattedValue = formatPhoneNumber(e.target.value);
+    setFormData(prev => ({
+      ...prev,
+      phone: formattedValue
     }));
   };
 
@@ -266,7 +288,9 @@ export default function ContactPage() {
                     id="phone"
                     name="phone"
                     value={formData.phone}
-                    onChange={handleInputChange}
+                    onChange={handlePhoneChange}
+                    placeholder="(404) 396-7397"
+                    maxLength={14}
                     required
                     className="w-full rounded-lg border border-silver/60 px-3 py-2 focus:border-gold focus:outline-none"
                   />
