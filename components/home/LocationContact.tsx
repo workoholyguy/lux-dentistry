@@ -10,8 +10,18 @@ export default function LocationContact() {
   return (
     <section className="bg-white py-16">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 md:items-center">
-        <div className="relative h-72 rounded-2xl bg-silver/30 shadow-inner md:h-80">
-          <div className="absolute inset-0 rounded-2xl border border-silver/60" />
+        <div className="overflow-hidden rounded-2xl border border-silver/60">
+          <iframe
+            title="Lux Dentistry Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3294.992784369931!2d-84.2822414237591!3d34.10168027315505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f596a95e0620c5%3A0x6f0615f6cf646c26!2s1155%20Bluegrass%20Ct%2C%20Alpharetta%2C%20GA%2030004!5e0!3m2!1sen!2sus!4v1700000000000"
+            width="100%"
+            height="320"
+            loading="lazy"
+            style={{ border: 0 }}
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            className="h-72 w-full md:h-80"
+          />
         </div>
         <div className="flex flex-col gap-3">
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-gold">Visit Us</p>

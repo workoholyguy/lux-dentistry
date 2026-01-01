@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function InsuranceAndPayments() {
   return (
     <section className="bg-softBg py-14">
@@ -12,6 +14,14 @@ export default function InsuranceAndPayments() {
           We work with many insurance plans and outline costs up front. Flexible arrangements are
           available for treatments not covered by insurance.
         </p>
+        <div className="mt-6">
+          <Link
+            href="/patients/insurance"
+            className="inline-block rounded-full bg-gold px-5 py-3 text-sm font-semibold text-nearBlack transition hover:bg-goldSoft"
+          >
+            Learn More
+          </Link>
+        </div>
       </div>
     </section>
   );
