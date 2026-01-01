@@ -18,7 +18,7 @@ const cleaningTypes = [
   },
   {
     name: "Gross Debridement",
-    name: "Initial cleaning for heavy buildup before comprehensive treatment",
+    description: "Initial cleaning for heavy buildup before comprehensive treatment",
     frequency: "One-time or as needed",
     duration: "60-90 minutes"
   },
