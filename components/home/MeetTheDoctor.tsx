@@ -1,8 +1,17 @@
+import Image from "next/image";
+
 export default function MeetTheDoctor() {
   return (
     <section className="bg-white py-16">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-2 md:items-center">
-        <div className="relative h-72 rounded-2xl bg-silver/30 shadow-inner md:h-80">
+        <div className="relative h-72 overflow-hidden rounded-2xl shadow-inner md:h-80">
+          <Image
+            src="/DentistDoctor.jpg"
+            alt="Lux Dentistry doctor"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
           <div className="absolute inset-0 rounded-2xl border border-silver/60" />
         </div>
         <div className="flex flex-col gap-4">
