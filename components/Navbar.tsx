@@ -242,7 +242,7 @@ export default function Navbar() {
             width={200}
             height={60}
             priority
-            className="h-22 w-auto"
+            className="h-15 w-auto"
           />
         </Link>
 

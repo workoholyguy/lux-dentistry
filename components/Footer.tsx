@@ -34,17 +34,17 @@ const socialLinks = [
 ];
 
 const services = [
-  { name: "Emergency Care", href: "/services/emergency-care" },
-  { name: "Dental Crowns", href: "/services/dental-crowns" },
-  { name: "Clear Aligners", href: "/services/clear-aligners" },
-  { name: "Dentures", href: "/services/dentures" },
+  { name: "Emergency Dental Treatment", href: "/services/emergency-dental-treatment" },
+  { name: "Crowns and Bridges", href: "/services/crowns-and-bridges" },
+  { name: "Invisalign Treatment", href: "/services/invisalign-treatment" },
+  { name: "Cosmetic Veneers", href: "/services/cosmetic-veneers" },
 ];
 
 const quickLinks = [
-  { name: "Special Offers", href: "/special-offers" },
-  { name: "Refer a Patient", href: "/refer-a-patient" },
-  { name: "Membership Plan", href: "/membership-plan" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "New Patient", href: "/new-patient" },
+  { name: "FAQ", href: "/patients/faq" },
+  { name: "Insurance Info", href: "/patients/insurance" },
+  { name: "Results Gallery", href: "/patients/results-gallery" },
 ];
 
 export default function Footer() {
