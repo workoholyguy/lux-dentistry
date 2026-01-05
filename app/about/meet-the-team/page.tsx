@@ -7,24 +7,26 @@ export const metadata = {
 
 const team = [
   {
-    name: "Dr. Sarah Johnson",
+    name: "Dr. Nasim Doroudgar",
     role: "Lead Dentist",
-    credentials: "DDS, MS",
-    experience: "15 years",
-    specializations: ["General Dentistry", "Cosmetic Dentistry", "Sedation Dentistry"],
-    education: "University of Pennsylvania School of Dental Medicine",
-    bio: "Dr. Johnson founded Lux Dentistry with a vision for patient-centered care. She combines extensive clinical experience with a gentle, communicative approach that puts patients at ease.",
-    imageAlt: "Dr. Sarah Johnson"
+    credentials: "DMD",
+    experience: "10 years",
+    specializations: ["General Dentistry", "Cosmetic Dentistry", "Endodontics", "Botox & Fillers"],
+    education: "Dental College of Georgia, Augusta, Georgia",
+    bio: "Dr. Nasim Doroudgar is a general dentist who takes pride in providing compassionate, patient-focused care. She treats her patients with the utmost respect, creating lasting relationships and providing smile-worthy experiences. Dr. Doroudgar ensures her patients are well informed and actively involved in their treatment. She offers multiple options so they can make informed decisions on the best way to restore oral health, functionality and a beautiful smile.",
+    imageAlt: "Dr. Nasim Doroudgar",
+    image: "/doctor-1.webp"
   },
   {
-    name: "Dr. Michael Chen",
+    name: "Dr. Michael Connors",
     role: "Associate Dentist",
     credentials: "DMD",
-    experience: "8 years",
+    experience: "38 years",
     specializations: ["Restorative Dentistry", "Dental Implants", "Emergency Care"],
     education: "Harvard School of Dental Medicine",
-    bio: "Dr. Chen specializes in complex restorative cases and dental implants. His precision-focused approach ensures optimal treatment outcomes for every patient.",
-    imageAlt: "Dr. Michael Chen"
+    bio: "Dr. Connors specializes in complex restorative cases and dental implants. His precision-focused approach ensures optimal treatment outcomes for every patient.",
+    imageAlt: "Dr. Michael Connors",
+    image: "/meet-the-team-2.jpg"
   },
   {
     name: "Dr. Emily Rodriguez",
@@ -34,7 +36,8 @@ const team = [
     specializations: ["Pediatric Dentistry", "Special Needs Patients", "Preventive Care"],
     education: "University of North Carolina School of Dentistry",
     bio: "Dr. Rodriguez has a special passion for working with children and patients with special needs. She creates positive dental experiences that last a lifetime.",
-    imageAlt: "Dr. Emily Rodriguez"
+    imageAlt: "Dr. Emily Rodriguez",
+    image: "/meet-the-team-5.jpg"
   }
 ];
 
@@ -44,7 +47,8 @@ const staff = [
     role: "Office Manager",
     experience: "10 years",
     bio: "Lisa ensures smooth operations and creates a welcoming environment for all our patients.",
-    imageAlt: "Lisa Thompson"
+    imageAlt: "Lisa Thompson",
+    image: "/meet-the-team-0.jpg"
   },
   {
     name: "Maria Garcia",
@@ -52,21 +56,24 @@ const staff = [
     credentials: "RDH",
     experience: "14 years",
     bio: "Maria specializes in preventive care and patient education, helping you maintain optimal oral health.",
-    imageAlt: "Maria Garcia"
+    imageAlt: "Maria Garcia",
+    image: "/meet-the-team-3.jpg"
   },
   {
     name: "Jennifer Kim",
     role: "Dental Assistant",
     experience: "6 years",
     bio: "Jennifer provides exceptional chairside assistance and ensures patient comfort during treatments.",
-    imageAlt: "Jennifer Kim"
+    imageAlt: "Jennifer Kim",
+    image: "/meet-the-team-4.jpg"
   },
   {
     name: "Robert Davis",
     role: "Treatment Coordinator",
     experience: "5 years",
-    bio: "Robert helps patients understand their treatment options and coordinates comprehensive care plans.",
-    imageAlt: "Robert Davis"
+    bio: "She helps patients understand their treatment options and coordinates comprehensive care plans.",
+    imageAlt: "Robert Davis",
+    image: "/meet-the-team-1.jpg"
   }
 ];
 
@@ -75,8 +82,15 @@ export default function MeetTheTeamPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-navy to-slateBlue">
-          <div className="absolute inset-0 bg-nearBlack/20" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/meet-the-team.jpg"
+            alt="Lux Dentistry team"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
               <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
@@ -115,13 +129,22 @@ export default function MeetTheTeamPage() {
             >
               <div className="overflow-hidden rounded-lg border border-silver/60 bg-silver/20">
                 <div className="relative aspect-[3/4] w-full">
-                  {/* Image placeholder */}
-                  <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                    <div className="text-center">
-                      <div className="text-4xl mb-2">👨‍⚕️</div>
-                      <p className="text-xs">{member.imageAlt}</p>
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
+                      <div className="text-center">
+                        <div className="text-4xl mb-2">👨‍⚕️</div>
+                        <p className="text-xs">{member.imageAlt}</p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
 
@@ -170,13 +193,22 @@ export default function MeetTheTeamPage() {
               >
                 <div className="overflow-hidden rounded-lg border border-silver/60 bg-silver/20">
                   <div className="relative aspect-square w-full">
-                    {/* Image placeholder */}
-                    <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                      <div className="text-center">
-                        <div className="text-3xl mb-1">👥</div>
-                        <p className="text-xs">{member.imageAlt}</p>
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.imageAlt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
+                        <div className="text-center">
+                          <div className="text-3xl mb-1">👥</div>
+                          <p className="text-xs">{member.imageAlt}</p>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
 

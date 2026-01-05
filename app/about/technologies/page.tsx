@@ -1,4 +1,4 @@
-import Image from "next/image";
+import LimitedVideo from "@/components/about/LimitedVideo";
 
 export const metadata = {
   title: "Technologies | Lux Dentistry",
@@ -73,10 +73,15 @@ export default function TechnologiesPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
-          <div className="absolute inset-0 bg-nearBlack/30" />
-          <div className="absolute inset-0 flex items-center">
-            <div className="mx-auto max-w-6xl px-6">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <LimitedVideo
+            src="/dexis-device-video.mp4"
+            className="absolute inset-0 h-full w-full object-cover"
+            maxDuration={97}
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
+          <div className="absolute inset-0 flex items-end">
+            <div className="mx-auto max-w-6xl px-6 pb-12">
               <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
                 Advanced technology for better dental care.
               </h1>
@@ -172,13 +177,11 @@ export default function TechnologiesPage() {
             </div>
             <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
               <div className="relative aspect-[4/3] w-full">
-                {/* Image placeholder for digital workflow */}
-                <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">💻</div>
-                    <p className="text-sm">Digital Workflow Image</p>
-                  </div>
-                </div>
+                <LimitedVideo
+                  src="/dexis-device-video.mp4"
+                  className="h-full w-full object-cover"
+                  maxDuration={97}
+                />
               </div>
             </div>
           </div>

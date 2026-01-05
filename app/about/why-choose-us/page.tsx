@@ -43,8 +43,15 @@ export default function WhyChooseUsPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-navy to-slateBlue">
-          <div className="absolute inset-0 bg-nearBlack/20" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/tooth-tech-dentures.jpg"
+            alt="Advanced dental technology"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
               <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
@@ -59,8 +66,8 @@ export default function WhyChooseUsPage() {
       </section>
 
       {/* REASONS GRID */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="mb-12 text-center">
+      <section className="mx-auto max-w-6xl px-6 py-10">
+        <div className="mb-8 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.08em] text-gold">Why Choose Us</p>
           <h2 className="mt-2 text-3xl font-semibold text-nearBlack md:text-4xl">
             Built on trust, clarity, and patient comfort.
@@ -83,7 +90,7 @@ export default function WhyChooseUsPage() {
 
       {/* PATIENT EXPERIENCE */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-6 py-10">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
               <h2 className="mb-6 text-3xl font-semibold text-nearBlack">
@@ -115,13 +122,12 @@ export default function WhyChooseUsPage() {
             </div>
             <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
               <div className="relative aspect-[4/5] w-full">
-                {/* Image placeholder for patient comfort */}
-                <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🪑</div>
-                    <p className="text-sm">Patient Comfort Image</p>
-                  </div>
-                </div>
+                <Image
+                  src="/dentist-seat.jpg"
+                  alt="Comfortable dental chair for patient comfort"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -129,17 +135,16 @@ export default function WhyChooseUsPage() {
       </section>
 
       {/* EXPERTISE SECTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-6 py-10">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for expertise */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">👨‍⚕️</div>
-                  <p className="text-sm">Clinical Expertise Image</p>
-                </div>
-              </div>
+              <Image
+                src="/dentist-glasses.jpg"
+                alt="Clinical expertise and professional dental care"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
           <div>
@@ -175,7 +180,7 @@ export default function WhyChooseUsPage() {
 
       {/* CALL TO ACTION */}
       <section className="bg-navy text-softBg">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <div className="mx-auto max-w-6xl px-6 py-10 text-center">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
             Ready to experience dental care that puts you first?
           </h2>
