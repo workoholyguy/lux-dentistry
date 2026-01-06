@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Preventative Dental Care | Lux Dentistry",
   description: "Comprehensive preventive dental care to maintain optimal oral health and prevent future dental problems.",
@@ -44,8 +46,15 @@ export default function PreventativeDentalCarePage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-navy to-slateBlue">
-          <div className="absolute inset-0 bg-nearBlack/20" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/preventative-4.jpg"
+            alt="Preventative dental care"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
               <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
@@ -75,13 +84,12 @@ export default function PreventativeDentalCarePage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for preventive care */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🦷</div>
-                  <p className="text-sm">Preventive Care Image</p>
-                </div>
-              </div>
+              <Image
+                src="/preventative-0.jpg"
+                alt="Preventive dental care"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -130,6 +138,34 @@ export default function PreventativeDentalCarePage() {
         </div>
       </section>
 
+      {/* VISUAL GALLERY */}
+      <section className="bg-white/60 border-y border-silver/50">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="overflow-hidden rounded-xl border border-silver/60">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/preventative-6.webp"
+                  alt="Preventive dental care"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-silver/60">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/preventative-7.webp"
+                  alt="Preventive dental care"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS SECTION WITH PLACEHOLDER */}
       <section className="bg-white/60 border-y border-silver/50">
         <div className="mx-auto max-w-6xl px-6 py-16">
@@ -148,11 +184,14 @@ export default function PreventativeDentalCarePage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Initial Assessment</h3>
               <p className="text-sm text-charcoal">Comprehensive examination and risk evaluation</p>
-              {/* Image/Video placeholder */}
-              <div className="mt-4 mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">📸</div>
-                  <p className="text-xs">Process Image 1</p>
+              <div className="mt-4 mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/preventative-1.jpg"
+                    alt="Initial assessment and examination"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -163,11 +202,14 @@ export default function PreventativeDentalCarePage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Professional Cleaning</h3>
               <p className="text-sm text-charcoal">Thorough cleaning and preventive treatments</p>
-              {/* Image/Video placeholder */}
-              <div className="mt-4 mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">🎬</div>
-                  <p className="text-xs">Process Video 2</p>
+              <div className="mt-4 mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/preventative-2.jpg"
+                    alt="Professional dental cleaning"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -178,11 +220,14 @@ export default function PreventativeDentalCarePage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Education & Prevention</h3>
               <p className="text-sm text-charcoal">Personalized guidance for ongoing care</p>
-              {/* Image/Video placeholder */}
-              <div className="mt-4 mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">📊</div>
-                  <p className="text-xs">Education Animation 3</p>
+              <div className="mt-4 mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/preventative-3.jpg"
+                    alt="Dental education and prevention"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -195,13 +240,12 @@ export default function PreventativeDentalCarePage() {
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for frequency guidance */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">📅</div>
-                  <p className="text-sm">Visit Frequency Image</p>
-                </div>
-              </div>
+              <Image
+                src="/preventative-5.webp"
+                alt="Regular dental visits"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
           <div>
