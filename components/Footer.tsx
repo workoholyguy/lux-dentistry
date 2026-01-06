@@ -76,7 +76,7 @@ export default function Footer() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex w-max rounded-full bg-gold px-4 py-2 text-sm font-semibold text-nearBlack transition hover:bg-goldSoft"
+              className="inline-flex w-max rounded-full bg-gold px-6 py-3 text-sm font-semibold text-nearBlack transition hover:bg-goldSoft sm:px-4 sm:py-2"
             >
               Book Now
             </Link>

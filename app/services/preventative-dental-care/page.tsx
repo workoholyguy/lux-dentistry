@@ -57,10 +57,10 @@ export default function PreventativeDentalCarePage() {
           <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
-              <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
+              <h1 className="max-w-3xl text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
                 Preventative dental care for a lifetime of healthy smiles.
               </h1>
-              <p className="mt-4 max-w-3xl text-lg leading-7 text-white/90">
+              <p className="mt-4 max-w-3xl text-base leading-6 text-white/90 sm:text-lg sm:leading-7">
                 Regular preventive care is the foundation of good oral health. We focus on stopping problems before they start.
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function PreventativeDentalCarePage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-gold">Preventive Care</p>
@@ -97,7 +97,7 @@ export default function PreventativeDentalCarePage() {
 
       {/* BENEFITS */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">Benefits of Preventive Care</h2>
           </div>
@@ -116,7 +116,7 @@ export default function PreventativeDentalCarePage() {
       </section>
 
       {/* WHAT WE DO */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">Our Preventive Services</h2>
           <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -168,7 +168,7 @@ export default function PreventativeDentalCarePage() {
 
       {/* PROCESS SECTION WITH PLACEHOLDER */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">The Preventive Care Process</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -236,7 +236,7 @@ export default function PreventativeDentalCarePage() {
       </section>
 
       {/* FREQUENCY GUIDANCE */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
@@ -272,7 +272,7 @@ export default function PreventativeDentalCarePage() {
 
       {/* CALL TO ACTION */}
       <section className="bg-navy text-softBg">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <div className="mx-auto max-w-6xl px-4 py-12 text-center sm:px-6 sm:py-16">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
             Start your preventive care journey today.
           </h2>
