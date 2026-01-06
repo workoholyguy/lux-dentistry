@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Dental X-rays | Lux Dentistry",
   description: "Advanced digital X-ray technology for accurate diagnosis and comprehensive dental care planning.",
@@ -44,15 +46,22 @@ export default function DentalXRaysPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
-          <div className="absolute inset-0 bg-nearBlack/30" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/x-ray-4.jpg"
+            alt="Dental X-ray being reviewed on a screen"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
               <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
                 Digital X-rays for precise diagnosis and care.
               </h1>
               <p className="mt-4 max-w-3xl text-lg leading-7 text-white/90">
-                Advanced imaging technology that reveals what we can't see with the naked eye, enabling better treatment decisions.
+                Advanced imaging technology that reveals what we can&apos;t see with the naked eye, enabling better treatment decisions.
               </p>
             </div>
           </div>
@@ -75,13 +84,12 @@ export default function DentalXRaysPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for X-ray technology */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">📡</div>
-                  <p className="text-sm">X-ray Technology Image</p>
-                </div>
-              </div>
+              <Image
+                src="/x-ray-0.jpg"
+                alt="Modern digital dental X-ray equipment"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -174,13 +182,12 @@ export default function DentalXRaysPage() {
             </div>
             <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
               <div className="relative aspect-[4/3] w-full">
-                {/* Image placeholder for digital X-ray comparison */}
-                <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">⚡</div>
-                    <p className="text-sm">Digital X-ray Demo Image</p>
-                  </div>
-                </div>
+                <Image
+                  src="/x-ray-1.jpg"
+                  alt="Comparison of digital dental X-ray images"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -196,7 +203,7 @@ export default function DentalXRaysPage() {
           </p>
         </div>
 
-        {/* Process steps with image/video placeholders */}
+        {/* Process steps with images */}
         <div className="grid gap-8 md:grid-cols-3">
           <div className="text-center">
             <div className="mx-auto w-24 h-24 rounded-full bg-gold/10 border-2 border-gold flex items-center justify-center mb-4">
@@ -204,11 +211,14 @@ export default function DentalXRaysPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Preparation</h3>
             <p className="text-sm text-charcoal mb-4">Lead apron and thyroid collar for protection</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🛡️</div>
-                <p className="text-xs">Protection Setup Image</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/x-ray-3.jpg"
+                  alt="Patient being prepared for a dental X-ray"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -219,11 +229,14 @@ export default function DentalXRaysPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Imaging</h3>
             <p className="text-sm text-charcoal mb-4">Quick exposure, typically 0.3 seconds</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">📸</div>
-                <p className="text-xs">X-ray Process Video</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/x-ray-0.jpg"
+                  alt="Dental X-ray imaging in progress"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -234,11 +247,14 @@ export default function DentalXRaysPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Review</h3>
             <p className="text-sm text-charcoal mb-4">Instant digital results and explanation</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">💻</div>
-                <p className="text-xs">Results Review Animation</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/x-ray-2.jpg"
+                  alt="Dentist reviewing dental X-rays with a patient"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

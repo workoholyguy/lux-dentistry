@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Fluoride Treatment | Lux Dentistry",
   description: "Professional fluoride treatments to strengthen tooth enamel and prevent cavities for optimal dental protection.",
@@ -57,8 +59,15 @@ export default function FluorideTreatmentPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-navy to-slateBlue">
-          <div className="absolute inset-0 bg-nearBlack/20" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/flourde-5.jpg"
+            alt="Professional fluoride treatment"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
               <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
@@ -89,13 +98,12 @@ export default function FluorideTreatmentPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for fluoride treatment */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🦷</div>
-                  <p className="text-sm">Fluoride Treatment Image</p>
-                </div>
-              </div>
+              <Image
+                src="/flourde-3.jpg"
+                alt="Fluoride protection for teeth"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -184,13 +192,12 @@ export default function FluorideTreatmentPage() {
 
             <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
               <div className="relative aspect-[4/3] w-full">
-                {/* Image placeholder for fluoride benefits */}
-                <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🛡️</div>
-                    <p className="text-sm">Fluoride Protection Benefits</p>
-                  </div>
-                </div>
+                <Image
+                  src="/flourde-1.jpg"
+                  alt="Who benefits from fluoride treatment"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -214,11 +221,14 @@ export default function FluorideTreatmentPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Preparation</h3>
             <p className="text-sm text-charcoal mb-4">Teeth are cleaned and dried for optimal fluoride adhesion</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🧹</div>
-                <p className="text-xs">Preparation Image</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/flourde-6.jpg"
+                  alt="Preparing teeth for fluoride treatment"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -229,11 +239,14 @@ export default function FluorideTreatmentPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Application</h3>
             <p className="text-sm text-charcoal mb-4">Fluoride is carefully applied to all tooth surfaces</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🎨</div>
-                <p className="text-xs">Application Process Video</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/flourde-4.jpg"
+                  alt="Applying fluoride treatment"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -244,11 +257,14 @@ export default function FluorideTreatmentPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Protection</h3>
             <p className="text-sm text-charcoal mb-4">Instructions for care while fluoride takes effect</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">⏱️</div>
-                <p className="text-xs">Protection Guidelines Animation</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/flourde-0.jpg"
+                  alt="Fluoride protection and care"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

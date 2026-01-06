@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Professional Dental Cleaning | Lux Dentistry",
   description: "Expert dental cleaning services to remove plaque, tartar, and stains for optimal oral health and a brighter smile.",
@@ -52,8 +54,15 @@ export default function DentalCleaningPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
-          <div className="absolute inset-0 bg-nearBlack/30" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/dental-cleaning-0.jpg"
+            alt="Professional dental cleaning"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
               <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
@@ -84,13 +93,12 @@ export default function DentalCleaningPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for dental cleaning */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🧹</div>
-                  <p className="text-sm">Dental Cleaning Image</p>
-                </div>
-              </div>
+              <Image
+                src="/dental-cleaning-6.jpg"
+                alt="Professional dental cleaning"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -189,11 +197,14 @@ export default function DentalCleaningPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Examination</h3>
             <p className="text-sm text-charcoal mb-4">Assessment of gum health and buildup</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🔍</div>
-                <p className="text-xs">Exam Image</p>
+            <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/dental-cleaning-5.jpg"
+                  alt="Dental examination"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -204,11 +215,14 @@ export default function DentalCleaningPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Scaling</h3>
             <p className="text-sm text-charcoal mb-4">Removal of plaque and tartar</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🧽</div>
-                <p className="text-xs">Scaling Process Video</p>
+            <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/dental-cleaning-7.jpg"
+                  alt="Dental scaling process"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -219,11 +233,14 @@ export default function DentalCleaningPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Polishing</h3>
             <p className="text-sm text-charcoal mb-4">Smoothing teeth and stain removal</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">✨</div>
-                <p className="text-xs">Polishing Animation</p>
+            <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/dental-cleaning-1.jpg"
+                  alt="Dental polishing"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -234,11 +251,14 @@ export default function DentalCleaningPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Education</h3>
             <p className="text-sm text-charcoal mb-4">Home care instructions and tips</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">📚</div>
-                <p className="text-xs">Education Session Image</p>
+            <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/dental-cleaning-8.jpg"
+                  alt="Dental education and home care"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -278,13 +298,12 @@ export default function DentalCleaningPage() {
             </div>
             <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
               <div className="relative aspect-[4/3] w-full">
-                {/* Image placeholder for dental tools */}
-                <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">🛠️</div>
-                    <p className="text-sm">Dental Tools & Equipment</p>
-                  </div>
-                </div>
+                <Image
+                  src="/dental-cleaning-3.jpg"
+                  alt="Advanced dental cleaning tools and equipment"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

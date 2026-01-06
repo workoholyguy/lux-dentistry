@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Dental Sealants | Lux Dentistry",
   description: "Protective dental sealants for children and adults to prevent cavities in hard-to-reach areas of molars and premolars.",
@@ -35,7 +37,15 @@ export default function DentalSealantPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/sealant-7.jpg"
+            alt="Dental sealant treatment hero"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 bg-nearBlack/30" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
@@ -67,13 +77,12 @@ export default function DentalSealantPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for dental sealants */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🛡️</div>
-                  <p className="text-sm">Dental Sealants Image</p>
-                </div>
-              </div>
+              <Image
+                src="/sealant-4.jpg"
+                alt="Cavity prevention with dental sealants"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -129,13 +138,12 @@ export default function DentalSealantPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for sealant candidates */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">👨‍👩‍👧‍👦</div>
-                  <p className="text-sm">Ideal Candidates for Sealants</p>
-                </div>
-              </div>
+              <Image
+                src="/sealant-3.jpg"
+                alt="Sealant benefits"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -159,11 +167,14 @@ export default function DentalSealantPage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Cleaning</h3>
               <p className="text-sm text-charcoal mb-4">Tooth surface is thoroughly cleaned</p>
-              {/* Image/Video placeholder */}
-              <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">🧹</div>
-                  <p className="text-xs">Cleaning Process Image</p>
+              <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/sealant-9.jpg"
+                    alt="Cleaning tooth for sealant application"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -174,11 +185,14 @@ export default function DentalSealantPage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Preparation</h3>
               <p className="text-sm text-charcoal mb-4">Tooth is prepared for sealant adhesion</p>
-              {/* Image/Video placeholder */}
-              <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">🔧</div>
-                  <p className="text-xs">Preparation Video</p>
+              <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/sealant-6.jpg"
+                    alt="Tooth preparation for sealant"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -189,11 +203,14 @@ export default function DentalSealantPage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Application</h3>
               <p className="text-sm text-charcoal mb-4">Sealant material is applied and cured</p>
-              {/* Image/Video placeholder */}
-              <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">💡</div>
-                  <p className="text-xs">Application Animation</p>
+              <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/sealant-5.jpg"
+                    alt="Sealant application process"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -204,11 +221,14 @@ export default function DentalSealantPage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Check</h3>
               <p className="text-sm text-charcoal mb-4">Bite and sealant integrity are verified</p>
-              {/* Image/Video placeholder */}
-              <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">✅</div>
-                  <p className="text-xs">Final Check Image</p>
+              <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/sealant-2.jpg"
+                    alt="Checking sealant final result"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -242,13 +262,12 @@ export default function DentalSealantPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for sealant maintenance */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🧴</div>
-                  <p className="text-sm">Sealant Care & Maintenance</p>
-                </div>
-              </div>
+              <Image
+                src="/sealant-10.jpg"
+                alt="Caring for your dental sealants"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

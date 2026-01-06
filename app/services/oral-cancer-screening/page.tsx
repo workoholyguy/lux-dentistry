@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Oral Cancer Screening | Lux Dentistry",
   description: "Early detection oral cancer screening using advanced technology and clinical expertise for peace of mind and early treatment.",
@@ -53,8 +55,15 @@ export default function OralCancerScreeningPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-navy to-slateBlue">
-          <div className="absolute inset-0 bg-nearBlack/20" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/oral-cancer-2.jpg"
+            alt="Oral cancer screening"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
               <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
@@ -84,13 +93,12 @@ export default function OralCancerScreeningPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for oral cancer awareness */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🔍</div>
-                  <p className="text-sm">Oral Cancer Screening Image</p>
-                </div>
-              </div>
+              <Image
+                src="/oral-cancer-1.jpg"
+                alt="Oral cancer screening examination"
+                fill
+                className="object-fit"
+              />
             </div>
           </div>
         </div>
@@ -126,8 +134,8 @@ export default function OralCancerScreeningPage() {
 
       {/* RISK FACTORS */}
       <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-2 md:items-start">
-          <div>
+        <div className="grid gap-12 md:grid-cols-2 md:items-stretch">
+          <div className="flex flex-col">
             <h2 className="mb-6 text-3xl font-semibold text-nearBlack">
               Risk Factors for Oral Cancer
             </h2>
@@ -135,28 +143,27 @@ export default function OralCancerScreeningPage() {
               Understanding your risk factors helps us determine the appropriate screening frequency
               and focus areas during your examination.
             </p>
-            <div className="grid gap-3">
+            <div className="grid gap-3 flex-grow">
               {riskFactors.map((factor) => (
                 <div
                   key={factor}
                   className="flex items-center gap-3 rounded-lg bg-white p-3 border border-silver/60"
                 >
-                  <div className="h-2 w-2 rounded-full bg-red-500 flex-shrink-0"></div>
+                  <div className="h-2 w-2 rounded-full bg-red-500 shrink-0"></div>
                   <span className="text-sm text-charcoal">{factor}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
-            <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for risk factors */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">⚠️</div>
-                  <p className="text-sm">Risk Factors Infographic</p>
-                </div>
-              </div>
+          <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20 flex">
+            <div className="relative w-full h-full">
+              <Image
+                src="/oral-cancer-3.jpg"
+                alt="Oral cancer risk factors"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -203,11 +210,14 @@ export default function OralCancerScreeningPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Initial Consultation</h3>
             <p className="text-sm text-charcoal mb-4">Review of medical history and risk factors</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">📋</div>
-                <p className="text-xs">Consultation Image</p>
+            <div className="mx-auto w-full max-w-sm h-48 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/oral-cancer-5.jpg"
+                  alt="Initial consultation for oral cancer screening"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -218,11 +228,14 @@ export default function OralCancerScreeningPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Comprehensive Exam</h3>
             <p className="text-sm text-charcoal mb-4">Visual and physical examination of oral tissues</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🔍</div>
-                <p className="text-xs">Examination Process Video</p>
+            <div className="mx-auto w-full max-w-sm h-48 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/oral-cancer-4.jpg"
+                  alt="Comprehensive oral cancer examination"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -232,12 +245,15 @@ export default function OralCancerScreeningPage() {
               <span className="text-2xl">3</span>
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Advanced Screening</h3>
-            <p className="text-sm text-charcoal mb-4">VELscope® technology and additional testing if needed</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">💡</div>
-                <p className="text-xs">VELscope Technology Animation</p>
+            <p className="text-sm text-charcoal mb-4">VELscope® technology and additional testing</p>
+            <div className="mx-auto w-full max-w-sm h-48 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/oral-cancer-6.jpg"
+                  alt="Advanced oral cancer screening with VELscope technology"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -250,13 +266,12 @@ export default function OralCancerScreeningPage() {
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
               <div className="relative aspect-[4/3] w-full">
-                {/* Image placeholder for regular screenings */}
-                <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">📅</div>
-                    <p className="text-sm">Regular Screening Schedule</p>
-                  </div>
-                </div>
+                <Image
+                  src="/oral-cancer-4.jpg"
+                  alt="Patient discussing regular oral cancer screening schedule"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
             <div>
