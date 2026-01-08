@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Crowns and Bridges | Lux Dentistry",
   description: "Custom dental crowns and bridges to restore damaged teeth and replace missing teeth with natural-looking, functional restorations.",
@@ -72,14 +74,21 @@ export default function CrownsAndBridgesPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
-          <div className="absolute inset-0 bg-nearBlack/30" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/crowns-0.png"
+            alt="Dental crowns and bridges restoration"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
-              <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
+              <h1 className="max-w-3xl text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
                 Restore function and beauty with crowns and bridges.
               </h1>
-              <p className="mt-4 max-w-3xl text-lg leading-7 text-white/90">
+              <p className="mt-4 max-w-3xl text-base leading-6 text-white/90 sm:text-lg sm:leading-7">
                 Custom-crafted dental restorations that look, feel, and function like natural teeth.
               </p>
             </div>
@@ -88,7 +97,7 @@ export default function CrownsAndBridgesPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-gold">Dental Restorations</p>
@@ -104,13 +113,12 @@ export default function CrownsAndBridgesPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for crowns and bridges */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">👑</div>
-                  <p className="text-sm">Crowns & Bridges Image</p>
-                </div>
-              </div>
+              <Image
+                src="/crowns-1.png"
+                alt="Dental crowns and bridges restoration"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -118,7 +126,7 @@ export default function CrownsAndBridgesPage() {
 
       {/* WHEN YOU NEED CROWNS */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">When Do You Need Crowns?</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -141,7 +149,7 @@ export default function CrownsAndBridgesPage() {
       </section>
 
       {/* CROWN TYPES */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">Types of Dental Crowns</h2>
           <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -185,7 +193,7 @@ export default function CrownsAndBridgesPage() {
 
       {/* BRIDGE TYPES */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">Types of Dental Bridges</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -229,7 +237,7 @@ export default function CrownsAndBridgesPage() {
       </section>
 
       {/* TREATMENT PROCESS WITH PLACEHOLDER */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">The Crown & Bridge Process</h2>
           <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -245,11 +253,14 @@ export default function CrownsAndBridgesPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Preparation</h3>
             <p className="text-sm text-charcoal mb-4">Tooth/teeth prepared and impressions taken</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🔧</div>
-                <p className="text-xs">Preparation Image</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/crowns-2.png"
+                  alt="Crown and bridge preparation"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -260,11 +271,14 @@ export default function CrownsAndBridgesPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Temporary</h3>
             <p className="text-sm text-charcoal mb-4">Temporary restoration placed while custom crown/bridge is made</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">⏳</div>
-                <p className="text-xs">Temporary Restoration Video</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/crowns-3.png"
+                  alt="Temporary crown and bridge restoration"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -275,11 +289,14 @@ export default function CrownsAndBridgesPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Final Placement</h3>
             <p className="text-sm text-charcoal mb-4">Custom crown/bridge permanently cemented</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🎉</div>
-                <p className="text-xs">Final Placement Animation</p>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg overflow-hidden border border-silver/60">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/crowns-4.png"
+                  alt="Final crown and bridge placement"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
@@ -288,7 +305,7 @@ export default function CrownsAndBridgesPage() {
 
       {/* MATERIAL SELECTION */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
               <h2 className="mb-6 text-3xl font-semibold text-nearBlack">
@@ -319,13 +336,12 @@ export default function CrownsAndBridgesPage() {
             </div>
             <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
               <div className="relative aspect-[4/3] w-full">
-                {/* Image placeholder for material comparison */}
-                <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">⚖️</div>
-                    <p className="text-sm">Material Comparison Chart</p>
-                  </div>
-                </div>
+                <Image
+                  src="/crowns-5.png"
+                  alt="Crown and bridge material selection"
+                  fill
+                  className="object-fit"
+                />
               </div>
             </div>
           </div>
@@ -333,7 +349,7 @@ export default function CrownsAndBridgesPage() {
       </section>
 
       {/* AFTERCARE */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">Caring for Your Crowns and Bridges</h2>
         </div>
@@ -365,7 +381,7 @@ export default function CrownsAndBridgesPage() {
 
       {/* CALL TO ACTION */}
       <section className="bg-navy text-softBg">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <div className="mx-auto max-w-6xl px-4 py-12 text-center sm:px-6 sm:py-16">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
             Restore your smile with crowns and bridges.
           </h2>

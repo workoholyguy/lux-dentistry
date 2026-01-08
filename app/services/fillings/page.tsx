@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Dental Fillings | Lux Dentistry",
   description: "High-quality dental fillings to restore decayed or damaged teeth using composite, amalgam, and other advanced materials.",
@@ -48,14 +50,21 @@ export default function FillingsPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-navy to-slateBlue">
-          <div className="absolute inset-0 bg-nearBlack/20" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/fillings-4.png"
+            alt="Dental fillings restoration"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
-              <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
+              <h1 className="max-w-3xl text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
                 Restore your teeth with durable, natural-looking fillings.
               </h1>
-              <p className="mt-4 max-w-3xl text-lg leading-7 text-white/90">
+              <p className="mt-4 max-w-3xl text-base leading-6 text-white/90 sm:text-lg sm:leading-7">
                 Modern dental fillings not only repair decay but restore function and aesthetics, helping you maintain a healthy, confident smile.
               </p>
             </div>
@@ -64,7 +73,7 @@ export default function FillingsPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-gold">Tooth Restoration</p>
@@ -80,13 +89,12 @@ export default function FillingsPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for dental fillings */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🦷</div>
-                  <p className="text-sm">Dental Fillings Image</p>
-                </div>
-              </div>
+              <Image
+                src="/fillings-2.png"
+                alt="Tooth restoration with dental fillings"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -94,7 +102,7 @@ export default function FillingsPage() {
 
       {/* WHEN YOU NEED FILLINGS */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">When Do You Need a Filling?</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -117,7 +125,7 @@ export default function FillingsPage() {
       </section>
 
       {/* FILLING TYPES */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">Types of Dental Fillings</h2>
           <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -161,7 +169,7 @@ export default function FillingsPage() {
 
       {/* FILLING PROCESS WITH PLACEHOLDER */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">The Filling Process</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -177,11 +185,14 @@ export default function FillingsPage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Numbing</h3>
               <p className="text-sm text-charcoal mb-4">Local anesthesia for comfort</p>
-              {/* Image/Video placeholder */}
-              <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">💉</div>
-                  <p className="text-xs">Anesthesia Image</p>
+              <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/fillings-6.png"
+                    alt="Local anesthesia for dental procedure"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -192,11 +203,14 @@ export default function FillingsPage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Decay Removal</h3>
               <p className="text-sm text-charcoal mb-4">Careful removal of decayed tooth structure</p>
-              {/* Image/Video placeholder */}
-              <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">🔨</div>
-                  <p className="text-xs">Decay Removal Video</p>
+              <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/fillings-7.png"
+                    alt="Decay removal from tooth"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -207,11 +221,14 @@ export default function FillingsPage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Preparation</h3>
               <p className="text-sm text-charcoal mb-4">Tooth prepared for filling material</p>
-              {/* Image/Video placeholder */}
-              <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">🔧</div>
-                  <p className="text-xs">Preparation Animation</p>
+              <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/fillings-9.png"
+                    alt="Tooth preparation for filling"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -222,11 +239,14 @@ export default function FillingsPage() {
               </div>
               <h3 className="text-lg font-semibold text-nearBlack mb-2">Placement</h3>
               <p className="text-sm text-charcoal mb-4">Filling placed and shaped to restore tooth</p>
-              {/* Image/Video placeholder */}
-              <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">🎨</div>
-                  <p className="text-xs">Filling Placement Image</p>
+              <div className="mx-auto w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/fillings-10.png"
+                    alt="Filling placement and shaping"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -235,7 +255,7 @@ export default function FillingsPage() {
       </section>
 
       {/* MATERIAL SELECTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <h2 className="mb-6 text-3xl font-semibold text-nearBlack">
@@ -267,13 +287,12 @@ export default function FillingsPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for material selection */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🎨</div>
-                  <p className="text-sm">Filling Materials Comparison</p>
-                </div>
-              </div>
+              <Image
+                src="/fillings-0.png"
+                alt="Choosing the right filling material"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -281,7 +300,7 @@ export default function FillingsPage() {
 
       {/* AFTERCARE */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">Caring for Your New Filling</h2>
           </div>
@@ -314,7 +333,7 @@ export default function FillingsPage() {
 
       {/* CALL TO ACTION */}
       <section className="bg-navy text-softBg">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <div className="mx-auto max-w-6xl px-4 py-12 text-center sm:px-6 sm:py-16">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
             Restore your smile with quality fillings.
           </h2>

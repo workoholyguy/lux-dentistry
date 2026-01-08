@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Lux Dentistry",
-  description: "Calm, modern dental care in your city.",
+  description: "Professional, modern dental care in your city.",
   icons: {
     icon: "/favicon.png",
   },
