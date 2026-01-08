@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Root Canal Treatment | Lux Dentistry",
   description: "Advanced root canal therapy to save infected teeth and relieve pain with modern techniques and technology.",
@@ -65,14 +67,21 @@ export default function RootCanalTreatmentPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
-          <div className="absolute inset-0 bg-nearBlack/30" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/root-canal-1.webp"
+            alt="Root canal treatment"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
-              <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
+              <h1 className="max-w-3xl text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
                 Save your tooth with advanced root canal treatment.
               </h1>
-              <p className="mt-4 max-w-3xl text-lg leading-7 text-white/90">
+              <p className="mt-4 max-w-3xl text-base leading-6 text-white/90 sm:text-lg sm:leading-7">
                 Modern root canal therapy eliminates infection and relieves pain while preserving your natural tooth.
               </p>
             </div>
@@ -81,7 +90,7 @@ export default function RootCanalTreatmentPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-gold">Endodontic Treatment</p>
@@ -97,13 +106,12 @@ export default function RootCanalTreatmentPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for root canal */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🦷</div>
-                  <p className="text-sm">Root Canal Treatment Image</p>
-                </div>
-              </div>
+              <Image
+                src="/root-canal-0.webp"
+                alt="Advanced root canal therapy"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -111,7 +119,7 @@ export default function RootCanalTreatmentPage() {
 
       {/* WHEN YOU NEED ROOT CANAL */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">Signs You May Need a Root Canal</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -134,7 +142,7 @@ export default function RootCanalTreatmentPage() {
       </section>
 
       {/* MYTHS VS FACTS */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">Root Canal Myths vs. Facts</h2>
           <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -163,7 +171,7 @@ export default function RootCanalTreatmentPage() {
 
       {/* TREATMENT PROCESS WITH PLACEHOLDER */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">The Root Canal Process</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -185,11 +193,18 @@ export default function RootCanalTreatmentPage() {
                   </div>
                 </div>
                 <p className="text-sm text-charcoal">{step.description}</p>
-                {/* Image/Video placeholder for each step */}
-                <div className="w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                  <div className="text-center text-silver">
-                    <div className="text-2xl mb-1">📹</div>
-                    <p className="text-xs">{step.step} Animation</p>
+                <div className="w-full max-w-xs h-24 rounded-lg overflow-hidden border border-silver/60">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={index === 0 ? "/root-canal-4.webp" :
+                           index === 1 ? "/root-canal-5.webp" :
+                           index === 2 ? "/root-canal-6.webp" :
+                           index === 3 ? "/root-canal-7.webp" :
+                           "/root-canal-8.jpg"}
+                      alt={`${step.step} in root canal treatment`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
               </div>
@@ -199,7 +214,7 @@ export default function RootCanalTreatmentPage() {
       </section>
 
       {/* AFTER TREATMENT */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-start">
           <div>
             <h2 className="mb-6 text-3xl font-semibold text-nearBlack">
@@ -231,13 +246,12 @@ export default function RootCanalTreatmentPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for aftercare */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🏥</div>
-                  <p className="text-sm">Post-Treatment Care</p>
-                </div>
-              </div>
+              <Image
+                src="/root-canal-9.jpg"
+                alt="Root canal aftercare and recovery"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -245,7 +259,7 @@ export default function RootCanalTreatmentPage() {
 
       {/* SUCCESS RATES AND BENEFITS */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">Why Choose Root Canal Over Extraction?</h2>
           </div>
@@ -280,7 +294,7 @@ export default function RootCanalTreatmentPage() {
 
       {/* CALL TO ACTION */}
       <section className="bg-navy text-softBg">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <div className="mx-auto max-w-6xl px-4 py-12 text-center sm:px-6 sm:py-16">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
             Don&apos;t let tooth pain control your life.
           </h2>

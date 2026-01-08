@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Cosmetic Veneers | Lux Dentistry",
   description: "Transform your smile with custom porcelain veneers for perfect teeth color, shape, and alignment.",
@@ -83,7 +85,13 @@ export default function CosmeticVeneersPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/veneers-0.webp"
+            alt="Hero: Cosmetic veneers"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-nearBlack/30" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
@@ -91,7 +99,7 @@ export default function CosmeticVeneersPage() {
                 Transform your smile with custom porcelain veneers.
               </h1>
               <p className="mt-4 max-w-3xl text-lg leading-7 text-white/90">
-                Perfectly crafted ceramic shells that give you the smile you've always wanted.
+                Perfectly crafted ceramic shells that give you the smile you&apos;ve always wanted.
               </p>
             </div>
           </div>
@@ -115,13 +123,12 @@ export default function CosmeticVeneersPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for cosmetic veneers */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">✨</div>
-                  <p className="text-sm">Cosmetic Veneers Image</p>
-                </div>
-              </div>
+              <Image
+                src="/veneers-1.jpg"
+                alt="Cosmetic veneers frame"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -177,13 +184,12 @@ export default function CosmeticVeneersPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for ideal candidates */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">😊</div>
-                  <p className="text-sm">Smile Transformation Preview</p>
-                </div>
-              </div>
+              <Image
+                src="/veneers-2.jpg"
+                alt="Smile transformation preview"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -259,11 +265,19 @@ export default function CosmeticVeneersPage() {
               <p className="text-sm text-charcoal">{step.description}</p>
               <p className="text-sm text-charcoal/80">{step.details}</p>
               {/* Image/Video placeholder for each step */}
-              <div className="w-full max-w-sm h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                <div className="text-center text-silver">
-                  <div className="text-2xl mb-1">📸</div>
-                  <p className="text-xs">{step.step} Demo</p>
-                </div>
+              <div className="w-full max-w-sm h-24 rounded-lg bg-silver/20 border border-silver/60 relative">
+                <Image
+                  src={
+                    index === 0 ? "/veneers-3.png" :
+                    index === 1 ? "/veneers-9.webp" :
+                    index === 2 ? "/veneers-5.webp" :
+                    index === 3 ? "/veneers-7.png" :
+                    "/veneers-8.jpg"
+                  }
+                  alt={`${step.step} demo`}
+                  fill
+                  className="object-cover rounded-lg"
+                />
               </div>
             </div>
           ))}
@@ -315,24 +329,24 @@ export default function CosmeticVeneersPage() {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">📸</div>
-                  <p className="text-sm">Before Veneers</p>
-                </div>
-              </div>
+              <Image
+                src="/1_Before.png"
+                alt="Before veneers"
+                fill
+                className="object-cover"
+              />
             </div>
             <p className="mt-2 text-center text-sm text-charcoal">Natural teeth with cosmetic concerns</p>
           </div>
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">✨</div>
-                  <p className="text-sm">After Veneers</p>
-                </div>
-              </div>
+              <Image
+                src="/1_After.PNG"
+                alt="After veneers"
+                fill
+                className="object-cover"
+              />
             </div>
             <p className="mt-2 text-center text-sm text-charcoal">Perfect smile with porcelain veneers</p>
           </div>
@@ -346,7 +360,7 @@ export default function CosmeticVeneersPage() {
             Ready for your dream smile?
           </h2>
           <p className="mb-8 max-w-2xl mx-auto text-lg leading-7 text-silver">
-            Schedule a consultation to see how porcelain veneers can transform your smile. We'll create a personalized treatment plan just for you.
+            Schedule a consultation to see how porcelain veneers can transform your smile. We&apos;ll create a personalized treatment plan just for you.
           </p>
           <a
             href="/contact"

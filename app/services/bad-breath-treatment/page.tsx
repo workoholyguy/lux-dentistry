@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Bad Breath Treatment | Lux Dentistry",
   description: "Comprehensive treatment for halitosis (bad breath) including diagnosis, causes identification, and effective solutions.",
@@ -95,7 +97,13 @@ export default function BadBreathTreatmentPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/breath-0.webp"
+            alt="Hero: Bad breath treatment"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-nearBlack/30" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
@@ -128,13 +136,12 @@ export default function BadBreathTreatmentPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for bad breath treatment */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🧼</div>
-                  <p className="text-sm">Bad Breath Treatment Image</p>
-                </div>
-              </div>
+              <Image
+                src="/breath-1.png"
+                alt="Bad breath treatment"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -199,13 +206,12 @@ export default function BadBreathTreatmentPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for when to see dentist */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">👨‍⚕️</div>
-                  <p className="text-sm">Professional Consultation</p>
-                </div>
-              </div>
+              <Image
+                src="/breath-2.webp"
+                alt="Professional consultation"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -263,11 +269,8 @@ export default function BadBreathTreatmentPage() {
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Medical History</h3>
             <p className="text-sm text-charcoal mb-4">Review of health conditions and medications</p>
             {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">📋</div>
-                <p className="text-xs">History Review Image</p>
-              </div>
+            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/breath-3.webp" alt="Medical history review" fill className="object-cover rounded-lg" />
             </div>
           </div>
 
@@ -278,11 +281,8 @@ export default function BadBreathTreatmentPage() {
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Oral Examination</h3>
             <p className="text-sm text-charcoal mb-4">Comprehensive dental and gum evaluation</p>
             {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🔍</div>
-                <p className="text-xs">Oral Exam Video</p>
-              </div>
+            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/breath-4.jpg" alt="Oral examination" fill className="object-cover rounded-lg" />
             </div>
           </div>
 
@@ -293,11 +293,8 @@ export default function BadBreathTreatmentPage() {
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Breath Analysis</h3>
             <p className="text-sm text-charcoal mb-4">Objective measurement of breath odor</p>
             {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">💨</div>
-                <p className="text-xs">Breath Analysis Animation</p>
-              </div>
+            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/breath-5.jpg" alt="Breath analysis" fill className="object-cover rounded-lg" />
             </div>
           </div>
 
@@ -308,11 +305,8 @@ export default function BadBreathTreatmentPage() {
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Treatment Plan</h3>
             <p className="text-sm text-charcoal mb-4">Customized treatment based on findings</p>
             {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">📝</div>
-                <p className="text-xs">Treatment Plan Image</p>
-              </div>
+            <div className="mx-auto w-full max-w-xs h-24 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/breath-6.jpg" alt="Treatment plan" fill className="object-cover rounded-lg" />
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Invisalign Treatment | Lux Dentistry",
   description: "Clear aligner therapy for discreet teeth straightening. Invisalign offers comfortable, removable aligners for a beautiful smile.",
@@ -97,7 +99,13 @@ export default function InvisalignTreatmentPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/invisalign-0.jpg"
+            alt="Hero: Invisalign treatment"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-nearBlack/30" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
@@ -129,13 +137,12 @@ export default function InvisalignTreatmentPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for Invisalign */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🦷</div>
-                  <p className="text-sm">Invisalign Aligners Image</p>
-                </div>
-              </div>
+              <Image
+                src="/invisalign-1.webp"
+                alt="Invisalign aligners"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -229,11 +236,20 @@ export default function InvisalignTreatmentPage() {
                 <p className="text-sm text-charcoal">{step.description}</p>
                 <p className="text-sm text-charcoal/80">{step.details}</p>
                 {/* Image/Video placeholder for each step */}
-                <div className="w-full max-w-sm h-24 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-                  <div className="text-center text-silver">
-                    <div className="text-2xl mb-1">📱</div>
-                    <p className="text-xs">{step.step} Demo</p>
-                  </div>
+                <div className="w-full max-w-sm h-24 rounded-lg bg-silver/20 border border-silver/60 relative">
+                  <Image
+                    src={
+                      index === 0 ? "/invisalign-2.png" :
+                      index === 1 ? "/invisalign-3.png" :
+                      index === 2 ? "/invisalign-4.jpeg" :
+                      index === 3 ? "/invisalign-6.jpg" :
+                      index === 4 ? "/invisalign-7.jpeg" :
+                      "/invisalign-8.webp"
+                    }
+                    alt={`${step.step} demo`}
+                    fill
+                    className="object-cover rounded-lg"
+                  />
                 </div>
               </div>
             ))}
@@ -267,13 +283,12 @@ export default function InvisalignTreatmentPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for aligner care */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🧼</div>
-                  <p className="text-sm">Aligner Care Instructions</p>
-                </div>
-              </div>
+              <Image
+                src="/invisalign-8.webp"
+                alt="Aligner care instructions"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -291,22 +306,24 @@ export default function InvisalignTreatmentPage() {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">📸</div>
-                  <p className="text-sm">Before Invisalign</p>
-                </div>
-              </div>
+              <Image
+                src="/invisalign-9.jpg"
+                alt="Before Invisalign"
+                fill
+                className="object-cover"
+              />
             </div>
             <p className="mt-2 text-center text-sm text-charcoal">Crowded or misaligned teeth</p>
           </div>
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              <div className="text-center">
-                <div className="text-4xl mb-2">✨</div>
-                <p className="text-sm">After Invisalign</p>
-              </div>
+              <Image
+                src="/invisalign-10.png"
+                alt="After Invisalign"
+                fill
+                className="object-cover"
+              />
             </div>
             <p className="mt-2 text-center text-sm text-charcoal">Straight, beautiful smile</p>
           </div>

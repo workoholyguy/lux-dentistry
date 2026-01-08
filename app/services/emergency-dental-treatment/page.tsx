@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Emergency Dental Treatment | Lux Dentistry",
   description: "24/7 emergency dental care for severe tooth pain, trauma, infections, and urgent dental situations.",
@@ -115,7 +117,13 @@ export default function EmergencyDentalTreatmentPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-navy to-slateBlue">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/emergency-0.jpg"
+            alt="Hero: Emergency dental treatment"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-nearBlack/20" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
@@ -148,13 +156,12 @@ export default function EmergencyDentalTreatmentPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for emergency dental care */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🚨</div>
-                  <p className="text-sm">Emergency Dental Care</p>
-                </div>
-              </div>
+              <Image
+                src="/emergency-1.jpg"
+                alt="Emergency dental care"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -273,13 +280,12 @@ export default function EmergencyDentalTreatmentPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for emergency kit */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🩹</div>
-                  <p className="text-sm">Emergency Preparedness</p>
-                </div>
-              </div>
+              <Image
+                src="/emergency-2.png"
+                alt="Emergency preparedness"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

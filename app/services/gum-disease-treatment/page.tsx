@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Gum Disease Treatment | Lux Dentistry",
   description: "Comprehensive gum disease treatment including scaling, root planing, and periodontal therapy to restore gum health.",
@@ -92,7 +94,13 @@ export default function GumDiseaseTreatmentPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/gum-0.webp"
+            alt="Hero: Gum disease treatment"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-nearBlack/20" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
@@ -124,13 +132,12 @@ export default function GumDiseaseTreatmentPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for gum disease */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🦷</div>
-                  <p className="text-sm">Gum Disease Treatment Image</p>
-                </div>
-              </div>
+              <Image
+                src="/gum-1.jpg"
+                alt="Gum disease treatment"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -204,13 +211,12 @@ export default function GumDiseaseTreatmentPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for risk factors */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">⚠️</div>
-                  <p className="text-sm">Gum Disease Risk Factors</p>
-                </div>
-              </div>
+              <Image
+                src="/gum-2.webp"
+                alt="Gum disease risk factors"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -272,11 +278,8 @@ export default function GumDiseaseTreatmentPage() {
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Assessment</h3>
             <p className="text-sm text-charcoal mb-4">Thorough examination and diagnosis</p>
             {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🔍</div>
-                <p className="text-xs">Assessment Image</p>
-              </div>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/gum-3.jpeg" alt="Assessment process" fill className="object-cover rounded-lg" />
             </div>
           </div>
 
@@ -287,11 +290,8 @@ export default function GumDiseaseTreatmentPage() {
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Treatment</h3>
             <p className="text-sm text-charcoal mb-4">Active treatment to eliminate infection</p>
             {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🧹</div>
-                <p className="text-xs">Treatment Process Video</p>
-              </div>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/gum-4.jpg" alt="Treatment process" fill className="object-cover rounded-lg" />
             </div>
           </div>
 
@@ -302,11 +302,8 @@ export default function GumDiseaseTreatmentPage() {
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Maintenance</h3>
             <p className="text-sm text-charcoal mb-4">Ongoing care to prevent recurrence</p>
             {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🏥</div>
-                <p className="text-xs">Maintenance Animation</p>
-              </div>
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/gum-5.jpg" alt="Maintenance process" fill className="object-cover rounded-lg" />
             </div>
           </div>
         </div>
@@ -341,13 +338,12 @@ export default function GumDiseaseTreatmentPage() {
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for systemic health */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">❤️</div>
-                  <p className="text-sm">Gum Health & Overall Health</p>
-                </div>
-              </div>
+              <Image
+                src="/gum-6.png"
+                alt="Gum health and overall health connection"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
           <div>

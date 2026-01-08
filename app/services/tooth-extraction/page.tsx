@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Tooth Extraction | Lux Dentistry",
   description: "Safe, comfortable tooth extraction services for damaged, infected, or problematic teeth with sedation options available.",
@@ -54,7 +56,13 @@ export default function ToothExtractionPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-slateBlue to-navy">
+        <div className="relative aspect-video w-full overflow-hidden">
+          <Image
+            src="/tooth-extraction-0.jpg"
+            alt="Hero: Tooth extraction"
+            fill
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-nearBlack/20" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
@@ -70,7 +78,7 @@ export default function ToothExtractionPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+<section className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-gold">Oral Surgery</p>
@@ -86,14 +94,13 @@ export default function ToothExtractionPage() {
             </p>
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
-            <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for tooth extraction */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🦷</div>
-                  <p className="text-sm">Tooth Extraction Image</p>
-                </div>
-              </div>
+          <div className="relative aspect-[4/3] w-full">
+              <Image
+                src="/tooth-extraction-1.webp"
+                alt="Tooth extraction frame 1"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -128,7 +135,7 @@ export default function ToothExtractionPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">Types of Tooth Extractions</h2>
           <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
-            The extraction method depends on the tooth's position, condition, and accessibility.
+            The extraction method depends on the tooth&apos;s position, condition, and accessibility.
           </p>
         </div>
 
@@ -215,17 +222,16 @@ export default function ToothExtractionPage() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
-            <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for aftercare */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🏥</div>
-                  <p className="text-sm">Post-Extraction Care</p>
-                </div>
-              </div>
-            </div>
+        <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
+          <div className="relative aspect-[4/3] w-full">
+            <Image
+              src="/tooth-extraction-2.jpg"
+              alt="Post-extraction care frame"
+              fill
+              className="object-cover"
+            />
           </div>
+        </div>
         </div>
       </section>
 
@@ -278,12 +284,9 @@ export default function ToothExtractionPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Preparation</h3>
             <p className="text-sm text-charcoal mb-4">Anesthesia and patient comfort measures</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">💉</div>
-                <p className="text-xs">Preparation Image</p>
-              </div>
+            {/* Image frame replaced by provided image in order */}
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/tooth-extraction-3.jpg" alt="Preparation frame" fill className="object-cover" />
             </div>
           </div>
 
@@ -293,12 +296,9 @@ export default function ToothExtractionPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Extraction</h3>
             <p className="text-sm text-charcoal mb-4">Careful removal of the tooth</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🔧</div>
-                <p className="text-xs">Extraction Process Video</p>
-              </div>
+            {/* Image frame using provided image 4.jpg */}
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/tooth-extraction-4.jpg" alt="Extraction frame" fill className="object-cover" />
             </div>
           </div>
 
@@ -308,12 +308,9 @@ export default function ToothExtractionPage() {
             </div>
             <h3 className="text-lg font-semibold text-nearBlack mb-2">Aftercare</h3>
             <p className="text-sm text-charcoal mb-4">Instructions and follow-up care</p>
-            {/* Image/Video placeholder */}
-            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 flex items-center justify-center">
-              <div className="text-center text-silver">
-                <div className="text-2xl mb-1">🏥</div>
-                <p className="text-xs">Aftercare Animation</p>
-              </div>
+            {/* Image frame using provided image 5.webp */}
+            <div className="mx-auto w-full max-w-xs h-32 rounded-lg bg-silver/20 border border-silver/60 relative">
+              <Image src="/tooth-extraction-5.webp" alt="Aftercare animation frame" fill className="object-cover" />
             </div>
           </div>
         </div>

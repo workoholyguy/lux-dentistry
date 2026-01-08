@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const metadata = {
   title: "Full Mouth Crowns | Lux Dentistry",
   description: "Complete mouth rehabilitation with custom crowns to restore function, aesthetics, and oral health.",
@@ -53,14 +55,21 @@ export default function FullMouthCrownsPage() {
     <div className="bg-softBg text-charcoal">
       {/* HERO */}
       <section className="relative">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-navy to-slateBlue">
-          <div className="absolute inset-0 bg-nearBlack/20" />
+        <div className="relative aspect-[16/9] w-full overflow-hidden">
+          <Image
+            src="/full-mouth-4.jpg"
+            alt="Full mouth crowns rehabilitation"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-nearBlack/40" />
           <div className="absolute inset-0 flex items-center">
             <div className="mx-auto max-w-6xl px-6">
-              <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-4xl">
+              <h1 className="max-w-3xl text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
                 Complete mouth rehabilitation with full-mouth crowns.
               </h1>
-              <p className="mt-4 max-w-3xl text-lg leading-7 text-white/90">
+              <p className="mt-4 max-w-3xl text-base leading-6 text-white/90 sm:text-lg sm:leading-7">
                 Transform your dental health and appearance with comprehensive crown therapy designed for lasting results.
               </p>
             </div>
@@ -69,7 +78,7 @@ export default function FullMouthCrownsPage() {
       </section>
 
       {/* INTRODUCTION */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-gold">Full Mouth Rehabilitation</p>
@@ -85,13 +94,12 @@ export default function FullMouthCrownsPage() {
           </div>
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for full mouth crowns */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">👑</div>
-                  <p className="text-sm">Full Mouth Crowns Image</p>
-                </div>
-              </div>
+              <Image
+                src="/full-mouth-3.jpg"
+                alt="Full mouth crowns rehabilitation"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -99,7 +107,7 @@ export default function FullMouthCrownsPage() {
 
       {/* INDICATIONS */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">When Full-Mouth Crowns Are Recommended</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -122,7 +130,7 @@ export default function FullMouthCrownsPage() {
       </section>
 
       {/* BENEFITS */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">Benefits of Full-Mouth Crowns</h2>
         </div>
@@ -141,7 +149,7 @@ export default function FullMouthCrownsPage() {
 
       {/* TREATMENT PHASES */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">Treatment Timeline & Process</h2>
             <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -180,7 +188,7 @@ export default function FullMouthCrownsPage() {
       </section>
 
       {/* MATERIAL OPTIONS */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div>
             <h2 className="mb-6 text-3xl font-semibold text-nearBlack">
@@ -213,13 +221,12 @@ export default function FullMouthCrownsPage() {
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              {/* Image placeholder for material options */}
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🎨</div>
-                  <p className="text-sm">Crown Material Options</p>
-                </div>
-              </div>
+              <Image
+                src="/full-mouth-0.jpg"
+                alt="Crown material options for full mouth rehabilitation"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -227,7 +234,7 @@ export default function FullMouthCrownsPage() {
 
       {/* CONSIDERATIONS */}
       <section className="bg-white/60 border-y border-silver/50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-semibold text-nearBlack">Important Considerations</h2>
           </div>
@@ -259,7 +266,7 @@ export default function FullMouthCrownsPage() {
       </section>
 
       {/* PROCESS VISUALIZATION WITH PLACEHOLDER */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-semibold text-nearBlack">The Transformation Process</h2>
           <p className="mt-4 max-w-2xl mx-auto text-base leading-7 text-charcoal">
@@ -271,24 +278,24 @@ export default function FullMouthCrownsPage() {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">📸</div>
-                  <p className="text-sm">Before Treatment</p>
-                </div>
-              </div>
+              <Image
+                src="/2_Before.jpeg"
+                alt="Before full mouth crowns treatment"
+                fill
+                className="object-cover"
+              />
             </div>
             <p className="mt-2 text-center text-sm text-charcoal">Worn down teeth affecting function and appearance</p>
           </div>
 
           <div className="overflow-hidden rounded-xl border border-silver/60 bg-silver/20">
             <div className="relative aspect-[4/3] w-full">
-              <div className="flex h-full items-center justify-center bg-silver/30 text-silver">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">✨</div>
-                  <p className="text-sm">After Treatment</p>
-                </div>
-              </div>
+              <Image
+                src="/2_After.jpeg"
+                alt="After full mouth crowns treatment"
+                fill
+                className="object-cover"
+              />
             </div>
             <p className="mt-2 text-center text-sm text-charcoal">Restored function, aesthetics, and confidence</p>
           </div>
@@ -297,7 +304,7 @@ export default function FullMouthCrownsPage() {
 
       {/* CALL TO ACTION */}
       <section className="bg-navy text-softBg">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <div className="mx-auto max-w-6xl px-4 py-12 text-center sm:px-6 sm:py-16">
           <h2 className="mb-4 text-3xl font-semibold md:text-4xl">
             Transform your smile with full-mouth rehabilitation.
           </h2>
